@@ -1,0 +1,32 @@
+@mixin button ($color: $white, $bk: $salmon) {
+    width: 100px;
+    height: 33px;
+    color: $color;
+    font-family: 'Montserrat';
+    font-size: .68rem;
+    font-weight: $ff-400;
+    text-transform: uppercase;
+    background-color: $bk;
+    border: none;
+    border-radius: .5em;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin tablet ($width: 42em) {
+    @media (min-width: $width) {
+        @content
+    }
+}
+
+@mixin desktop ($width: 63em) {
+    @media (min-width: $width) {
+        @content
+    }
+}
+
+@mixin container ($width: 65em) {
+    @media (min-width: $width) {
+        @content
+    }
+}

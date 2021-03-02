@@ -1,0 +1,24 @@
+.first-purchase {
+    background-color: $magenta;
+    padding: 1em 4.5em;
+    text-align: center;
+    button {
+        @include button ($bk: $salmon)
+    }
+}
+
+.first-purchase-title {
+    @include title ($color: $white, $fw: $ff-500);
+    line-height: 1.5rem;
+    text-align: center;
+    padding-bottom: 1em;
+    span {
+        color: $salmon;
+    }
+}
+
+@include desktop {
+    .first-purchase {
+        padding: 3em 4.5em;
+    }
+}

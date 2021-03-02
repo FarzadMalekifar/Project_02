@@ -1,0 +1,46 @@
+.popular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    h2 {
+        @include title ();
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin: 3.5em 0;
+    }
+}
+
+.popular-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em 1.5em 4em 1.5em;
+    width: 225px;
+    height: 319px;
+    background-color: $white;
+    border-radius: 48px;
+    transition: box-shadow 300ms ease, margin-top 250ms ease-in;
+    &:hover {
+        margin-top: .5em;
+        box-shadow: 0 15px 25px rgba($color: $black, $alpha: .2);
+    }
+    h3 {
+        @include title ($fs: .87rem);
+    }
+    span {
+        @include title ($fs: .87rem);
+        color: $salmon;
+        padding: 1em 0;
+    }
+}
+
+.popular-img {
+    width: 225px;
+    margin-top: -4em;
+    margin-bottom: 2em;
+}
+
+.popular_button {
+    @include button ();
+}

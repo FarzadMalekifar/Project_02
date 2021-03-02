@@ -1,0 +1,51 @@
+.plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plan-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 315px;
+    background-color: $white;
+    border-radius: 35px;
+    margin: 1.5em;
+    transition: box-shadow 300ms ease, margin-top 250ms ease-in;
+    img {
+        width: 180px;
+        height: 152px;
+    }
+    h3 {
+        @include title ($fs: .87rem);
+    }
+    &:hover {
+        margin-top: 0;
+        box-shadow: 0 15px 25px rgba($color: $black, $alpha: .2);
+    }
+}
+
+.plans-button {
+    @include button ($bk: $magenta);
+}
+
+@include tablet {
+    .plans {
+        padding: 3em 0;
+    }
+    .plan-box {
+        width: 287px;
+        height: 434px;
+    }
+}
+
+@include desktop {
+    .plan-box {
+        h3 {
+            font-size: 1.12rem;
+        }
+    }
+}

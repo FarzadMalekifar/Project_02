@@ -1,0 +1,80 @@
+.offer {
+    margin-bottom: 2em;
+}
+
+.offer-title {
+    text-align: center;
+    margin-bottom: 1em;
+    h2 {
+        @include title ($fs: .87rem);
+        text-align: center;
+    }
+}
+
+.offer-boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offer-box {
+    position: relative;
+    width: 130px;
+    height: 160px;
+    margin: 1.6em;
+    padding-top: auto;
+    background-color: $magenta;
+    border-radius: 7px;
+    text-align: center;
+    box-shadow: 0;
+    transition: box-shadow 300ms ease, margin-top 250ms ease-in;
+    &:hover {
+        margin-top: 0;
+        box-shadow: 0 15px 15px rgba($color: $magenta, $alpha: .4);
+    }
+    h3 {
+        font-size: .67rem;
+        font-family: 'Montserrat';
+        font-weight: $ff-700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: auto;
+        color: $white;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.offer-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.offer-box-link {
+    position: absolute;
+    width: 130px;
+    height: 160px;
+    top: 0;
+    left: 0;
+}
+
+.offer-boxs-img {
+    width: 4.75rem;
+    padding: 1.5em 0;
+}
+
+.padding {
+    margin-bottom: 1.2em;
+}
+
+@include tablet {
+    .offer-title h2 {
+        font-size: 1rem;
+    }
+    .offer-box h3 {
+        font-size: .7rem;
+    }
+}

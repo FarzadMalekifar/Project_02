@@ -1,0 +1,158 @@
+            .header {
+                margin: 1.5em 1.5em;
+                border-bottom: 3px solid $white;
+                @include container {
+                    width: 1022px;
+                    margin: 2em auto;
+                }
+            }
+            
+            .header-menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .header-menu-logo {
+                font-size: 1.5rem;
+                font-weight: $ff-700;
+                span {
+                    color: $salmon;
+                }
+                a {
+                    color: $black;
+                    text-decoration: none;
+                }
+            }
+            
+            .header-menu-main {
+                display: none;
+            }
+            
+            .header-menu-butten {
+                border: none;
+                background-color: $background;
+                cursor: pointer;
+                outline: none;
+                .header-menu-icon {
+                    width: 1.68rem;
+                }
+            }
+            
+            .header-slider {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 4.3em 2em;
+            }
+            
+            .header-slider-p {
+                padding-top: .7em;
+                font-size: .75rem;
+            }
+            
+            .header-slider-text {
+                text-align: center;
+            }
+            
+            .header-slider-welcome {
+                font-size: .6rem;
+                color: $salmon;
+                font-weight: $ff-700;
+                text-transform: uppercase;
+                line-height: 1.2rem;
+            }
+            
+            .header-slider-title {
+                font-size: 2.1rem;
+                color: $magenta;
+                text-align: center;
+            }
+            
+            .header-slider-pic {
+                width: 13.75rem;
+                padding: 1em;
+                transition: all 5000ms ease-in-out;
+                &:hover,
+                &:focus {
+                    transform: rotate(360deg);
+                }
+            }
+            
+            .header-slider-button {
+                @include button ()
+            }
+            
+            @include tablet {
+                .header-slider {
+                    display: grid;
+                    grid-template-columns: minmax(8em, 3fr) minmax(4em, 2fr);
+                    grid-template-rows: 2fr 1fr;
+                    padding: 2.3em 2em;
+                }
+                .header-slider-text,
+                .header-slider-welcome,
+                .header-slider-title,
+                .p {
+                    width: 95%;
+                    text-align: left;
+                    grid-column: 1 / 2;
+                    grid-row: 1 /2;
+                }
+                .header-slider-title {
+                    font-size: 2.62rem;
+                }
+                .header-slider-welcome {
+                    font-size: .67rem;
+                }
+                .header-slider-button {
+                    margin-right: auto;
+                    margin-bottom: auto;
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
+                .header-slider-pic {
+                    width: 14.75rem;
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 3;
+                }
+            }
+            
+            @include desktop {
+                .header-slider-title {
+                    font-size: 3.12rem;
+                }
+                .header-slider-welcome {
+                    font-size: .87rem;
+                }
+                .header-slider-p {
+                    font-size: .87rem;
+                }
+                .header-menu-main {
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 15em;
+                    li {
+                        @include title ($fs: .87rem);
+                        list-style: none;
+                        margin: 0 1em;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $black;
+                        &:hover {
+                            color: $salmon;
+                        }
+                    }
+                }
+                .header-menu {
+                    margin: auto 0;
+                }
+                .header-slider {
+                    padding: 2.3em 0;
+                }
+                .header-slider-pic {
+                    width: 15.75rem;
+                }
+            }
